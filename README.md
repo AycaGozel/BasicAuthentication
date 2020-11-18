@@ -106,9 +106,9 @@ Spring Security creates the login page default and /login URI to authenticate to
 ``` java
 @RestController
 public class ControllerSecurity {
-    @GetMapping("/deneme1")
+    @GetMapping("hello")
     public String hellospringsecurity() {
-        return "deneme1";
+        return "Hello";
     }
 }
 ```
@@ -193,7 +193,19 @@ spring.datasource.password=sa
 spring.jpa.hibernate.ddl-auto=update  # To reach the db and the entity classes, do not write none!
 spring.h2.console.enabled=true # Enabling H2 Console
   ``` 
-
+To observe the H2 web browser, the /h2 path should be permitted and http.headers().frameOptions().disable(); line should be applied to the http headers on the SecurityConfig class.
+```
+ protected void configure(HttpSecurity http) throws Exception {
+    	http.headers().frameOptions().disable();
+        http.csrf().disable()
+                .authorizeRequests().antMatchers("/login").permitAll()
+                .antMatchers("/h2/**").permitAll()
+                .anyRequest().authenticated()
+                .and().sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+      http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
+    }
+```
         
         
         
