@@ -91,7 +91,7 @@ Dependencies are added for SpringBoot Security, H2 Database, Data Jpa (to use an
 "password":"123"
 }
 ```
-3. To authantica the login page, you can either GET the http://localhost:8080/hello or http://localhost:8080/hallo URIs. Both of them are possible. By copying the token to the Bearer Token from the Authorization tab, 
+3. To authantice the login page, you can either GET the http://localhost:8080/hello or http://localhost:8080/hallo URIs. Both of them are possible. By copying the token to the Bearer Token on the Authorization tab, 
 the authentication process will be completed as succesfully. 
 
 
@@ -101,7 +101,7 @@ The project includes two different type of usage. If the H2 database related dep
 without using H2 DB insertion.
 # Token Generation
 
-Spring Security creates the login page default and /login URI to authenticate to change the path as /deneme1 and /deneme2 we should change the controller by adding the 
+Spring Security creates the login page default and /login URI to authenticate to change the path as /hello and /hallo we should change the controller by adding the 
 @GetMapping annotation.
 ``` java
 @RestController
