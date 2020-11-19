@@ -113,9 +113,9 @@ public class ControllerSecurity {
 }
 ```
 
-Also give permission to authenticated users to this path from the SecurityConfig.java class. Also, sessionCreationPolicy should be STATELESS. In order to
-generate token jwtFilter object should be applied to the addFilterBefore method. 
-```
+Also give permission to authenticated users to this path from the SecurityConfig.java class. sessionCreationPolicy should be STATELESS in order to
+generate token from jwtFilter object it should be applied to the addFilterBefore method. 
+``` java
  protected void configure(HttpSecurity http) throws Exception {
     	http.headers().frameOptions().disable();
         http.csrf().disable()
