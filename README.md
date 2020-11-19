@@ -91,7 +91,7 @@ Dependencies are added for SpringBoot Security, H2 Database, Data Jpa (to use an
 "password":"123"
 }
 ```
-3. To authantica the login page, you can either GET the http://localhost:8080/deneme1 or http://localhost:8080/deneme2 URIs. Both of them are possible. By copying the token to the Bearer Token from the Authorization tab, 
+3. To authantica the login page, you can either GET the http://localhost:8080/hello or http://localhost:8080/hallo URIs. Both of them are possible. By copying the token to the Bearer Token from the Authorization tab, 
 the authentication process will be completed as succesfully. 
 
 
