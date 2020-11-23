@@ -106,7 +106,7 @@ Spring Security creates the login page default and /login URI to authenticate to
 ``` java
 @RestController
 public class ControllerSecurity {
-    @GetMapping("hello")
+    @GetMapping("/hello")
     public String hellospringsecurity() {
         return "Hello";
     }
