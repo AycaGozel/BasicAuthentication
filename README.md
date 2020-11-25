@@ -21,7 +21,6 @@ BasicAuthentication/
  │       │
  │       ├── deneme.deneme2.Model
  │       │   ├── User.java
- │       │   └── Role.java
  │       │
  │       ├── deneme.deneme2.Service
  │       │   ├── CustomUserDetailsService.java
